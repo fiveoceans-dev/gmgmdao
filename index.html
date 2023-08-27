@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nouns State</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Column and Main Window Styles */
+    #container {
+      display: flex;
+    }
+    #left-column {
+      width: 20%;
+      background-color: #ffffff;
+      padding: 10px;
+    }
+    #main-window {
+      width: 80%;
+      padding: 10px;
+    }
+
+    /* List styles */
+    #left-column ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    #left-column ul li {
+      cursor: pointer;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+    #left-column ul li:hover {
+      background-color: #ddd;
+    }
+
+    /* Hide all content initially */
+    .content {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <!-- Left Column -->
+    <div id="left-column">
+      <ul>
+        <li id="nouns">Nouns</li>
+        <li id="nounsStateApp">NounsState App</li>
+        <li id="privacyPolicy">Privacy Policy</li>
+      </ul>
+    </div>
+
+    <!-- Main Window -->
+    <div id="main-window">
+      <!-- Content for Nouns -->
+      <div id="nouns-content" class="content">
+        <h1>Nouns</h1>
+        <p>Behold, an infinite work of art! Nouns is a community-owned brand that makes a positive impact by funding ideas and fostering collaboration. From collectors and technologists, to non-profits and brands, Nouns is for everyone.</p>
+      </div>
+
+      <!-- Content for NounsState App -->
+      <div id="nounsStateApp-content" class="content">
+        <h1>Nouns State App</h1>
+        <p>Nouns is an NFT community with fans from all around the world. This version focuses on delivering information from the blockchain to the fans. In the upcoming weeks, we will be rolling out interactive features in the next versions.</p>
+      </div>
+
+      <!-- Content for Privacy Policy -->
+      <div id="privacyPolicy-content" class="content">
+        <h1>Privacy Policy</h1>
+        <p>Privacy Policy
+
+Effective Date: [2023.08.27]
+
+This Privacy Policy describes how ("we", "us", or "our") collects, uses, and discloses information when you use our mobile application ("Nouns State").
+
+Information Collection and Use
+
+We do not collect any personal information directly through our App.
+
+Third-Party Services
+
+Our App may use third-party services provided by other companies. These services may have their own privacy policies and terms of use. We encourage you to review these policies before using the App.
+
+Children's Privacy
+
+Our App is not directed towards individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you believe your child has provided us with personal information, please contact us, and we will delete the information.
+
+Changes to Privacy Policy
+
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. It is your responsibility to review this Privacy Policy periodically for changes.
+
+Contact Us
+
+If you have any questions or concerns about our Privacy Policy, please contact us at [contact email].
+
+By using our App, you agree to the terms outlined in this Privacy Policy.
+
+[Personal]
+[niip42@gmail.com]</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to toggle the content
+    document.querySelectorAll('#left-column ul li').forEach((li) => {
+      li.addEventListener('click', function() {
+        // Hide all content
+        document.querySelectorAll('.content').forEach((content) => {
+          content.style.display = 'none';
+        });
+
+        // Show the content related to the clicked list item
+        const id = this.id + '-content';
+        const content = document.getElementById(id);
+        content.style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
